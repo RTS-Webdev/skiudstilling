@@ -63,7 +63,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-inherit/30 backdrop-blur-sm">
+    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-transparent md:bg-inherit/30 md:backdrop-blur-sm">
       <Link href="/" className="text-2xl font-bold text-white z-50">
         Horizon Travel
       </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
       >
-        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isMenuOpen ? <X className="w-12 h-12" /> : <Menu className="w-12 h-12" />}
       </button>
 
       {/* Desktop Menu */}
@@ -88,12 +88,12 @@ export default function Navigation() {
               {item.subItems && <ChevronDown className="w-4 h-4 ml-1" />}
             </Link>
             {item.subItems && (
-              <div className="absolute left-0 mt-2 w-48 bg-transparent rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
+              <div className="absolute left-0 mt-2 w-48 bg-neutral-900/40 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50 rounded-lg">
                 {item.subItems.map((subItem) => (
                   <Link
                     key={subItem.title}
                     href={subItem.href}
-                    className="block px-4 py-4 text-sm text-gray-100 hover:bg-neutral-800"
+                    className="block px-4 py-4 text-sm text-gray-100 hover:bg-zinc-700/60 hover:bg-opacity-10 backdrop-blur-sm"
                   >
                     {subItem.title}
                   </Link>
@@ -107,7 +107,7 @@ export default function Navigation() {
       {/* Mobile Menu Dropdown */}
       <div
         className={`fixed inset-0 bg-gradient-to-b from-neutral-900 to-black transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } md:hidden overflow-y-auto`}
+          } md:hidden overflow-y-auto bg-inherit/30 md:backdrop-blur-sm`}
       >
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col pt-24 px-6">
