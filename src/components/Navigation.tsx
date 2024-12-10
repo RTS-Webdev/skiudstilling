@@ -63,7 +63,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-transparent">
+    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-inherit/30 backdrop-blur-sm">
       <Link href="/" className="text-2xl font-bold text-white z-50">
         Horizon Travel
       </Link>
