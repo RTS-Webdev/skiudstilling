@@ -50,11 +50,11 @@ const navItems = [
     ],
   },
   {
-    title: "Information",
-    href: "/information",
+    title: "About Us",
+    href: "/about",
     subItems: [
-      { title: "Our Story", href: "/information/our-story" },
-      { title: "Contact Us", href: "/information/contact" },
+      { title: "Our Story", href: "/about/our-story" },
+      { title: "Contact Us", href: "/about/contact" },
     ],
   },
 ];
