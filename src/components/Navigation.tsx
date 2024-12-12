@@ -106,8 +106,8 @@ export default function Navigation() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`fixed inset-0 bg-gradient-to-b from-neutral-900 to-black transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } md:hidden overflow-y-auto bg-inherit/30 md:backdrop-blur-sm`}
+        className={`fixed right-0 top-0 min-h-screen w-full bg-gradient-to-b from-neutral-900 to-black transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          } md:hidden bg-inherit/30 md:backdrop-blur-sm`}
       >
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col pt-24 px-6">
