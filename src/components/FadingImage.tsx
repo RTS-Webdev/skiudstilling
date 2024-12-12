@@ -15,7 +15,7 @@ export default function FadingImage() {
     }, [])
 
     return (
-        <div className="relative w-full h-full flex flex-col items-center">
+        <div className="relative w-full min-h-[calc(100vh-15vh)] flex flex-col items-center">
             <div className="w-full max-w-[70%] mx-auto">
                 <div className="relative aspect-[16/9] mb-8">
                     <AnimatePresence mode="wait">
@@ -60,4 +60,3 @@ export default function FadingImage() {
         </div>
     )
 }
-

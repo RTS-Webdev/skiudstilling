@@ -63,7 +63,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-transparent md:bg-inherit/30 md:backdrop-blur-sm">
+    <nav className="w-full flex items-center justify-between p-4 md:p-6 bg-transparent bg-inherit/30 backdrop-blur-sm">
       <Link href="/" className="text-2xl font-bold text-white z-50">
         Horizon Travel
       </Link>
@@ -77,12 +77,12 @@ export default function Navigation() {
       </button>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-8 flex-grow justify-center text-neutral-400">
+      <div className="hidden md:flex gap-8 flex-grow justify-center">
         {navItems.map((item) => (
           <div key={item.title} className="relative group">
             <Link
               href={item.href}
-              className="hover:bg-gray-100 hover:bg-opacity-10 hover:text-white rounded-full px-4 py-2 transition-colors flex items-center"
+              className="hover:bg-gray-100 hover:bg-opacity-10 hover:text-neutral-300 rounded-full px-4 py-2 transition-colors flex items-center"
             >
               {item.title}
               {item.subItems && <ChevronDown className="w-4 h-4 ml-1" />}
