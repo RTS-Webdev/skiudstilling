@@ -55,6 +55,7 @@ const navItems = [
     subItems: [
       { title: "Our Story", href: "/about/our-story" },
       { title: "Contact Us", href: "/about/contact" },
+      { title: "Terms of Service", href: "/tos" },
     ],
   },
 ];

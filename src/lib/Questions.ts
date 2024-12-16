@@ -6,18 +6,8 @@ type Question = {
 
 export const questions: Question[] = [
     {
-      question: "Hvilken type skiferie foretrækker du?",
+      question: "Spørgsmål 1",
       answers: ["Familie", "Par", "Venner", "Solo"],
       correctAnswer: "Familie"
-    },
-    {
-      question: "Hvilken type skiferie foretrækker du?",
-      answers: ["Familie", "Par", "Venner", "Solo"],
-      correctAnswer: "Par"
-    },
-    {
-      question: "Hvilken type skiferie foretrækker du?",
-      answers: ["Familie", "Par", "Venner", "Solo"],
-      correctAnswer: "Venner"
     }
 ];
