@@ -63,7 +63,7 @@ export default function Home() {
                     <div className="container mx-auto">
                         <div className="max-w-2xl mx-auto">
                             {!showResult ? (
-                                <form onSubmit={(e) => { e.preventDefault(); handleConfirm(); }}>
+                                <form action={() => handleConfirm()}>
                                     <h2 className="text-2xl font-semibold mb-6">{questions[currentQuestion].question}</h2>
                                     <fieldset className="mb-8">
                                         <legend className="sr-only">Answer options</legend>

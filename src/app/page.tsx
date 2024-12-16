@@ -4,6 +4,7 @@ import FadingImage from "$/components/FadingImage";
 import Navigation from "$/components/Navigation";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#100f0f] text-white overflow-x-hidden">
