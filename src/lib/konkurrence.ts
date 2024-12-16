@@ -2,6 +2,8 @@
 
 import { z } from "zod";
 import { questions } from "./Questions";
+import { db } from "$/server/db";
+import { konkEntry } from "$/server/db/schema";
 
 type QuestionError = {
     error: string;
@@ -12,7 +14,7 @@ type QuestionError = {
 export type QuestionReponse = number | QuestionError;
 
 export async function handleAnswers(state: QuestionReponse, formData: string[]): Promise<QuestionReponse> {
-    if(questions.length !== formData.length) return {error: "Invalid form data", status: 400};
+    if (questions.length !== formData.length) return { error: "Invalid form data", status: 400 };
     let correctAnswers = 0;
 
     for (let i = 0; i < questions.length; i++) {
@@ -27,10 +29,10 @@ export async function handleAnswers(state: QuestionReponse, formData: string[]):
 };
 
 export type userFormInputSuccess = {
-    success: string, 
+    success: string,
 }
 
-export type userFormInputError = {error: string, parseError: string};
+export type userFormInputError = { error: string, parseError: string };
 
 export async function handleUserInput(prev: userFormInputSuccess | userFormInputError | null, formData: FormData): Promise<userFormInputError | userFormInputSuccess | null> {
     "use server";
@@ -48,17 +50,36 @@ export async function handleUserInput(prev: userFormInputSuccess | userFormInput
         phone: formData.get("phone")
     });
 
-    if(!parsedData.success) {
+    if (!parsedData.success) {
         console.log(parsedData.error.flatten());
         return {
             error: "Der skete en fejl",
             parseError: parsedData.error.message
         }
     }
-    console.log(parsedData.data);
-    const res: userFormInputSuccess = {
+
+    try {
+        const dbRes = await db.insert(konkEntry).values({
+            efternavn: parsedData.data.efternavn,
+            navn: parsedData.data.navn,
+            email: parsedData.data.email,
+            phone: parseInt(parsedData.data.phone)
+        }).returning();
+        console.log(dbRes);
+    } catch (error) {
+        const e = error as Error;
+        if (e.message.includes("duplicate key value violates unique constraint")) {
+            return {
+                error: "Der skete en fejl",
+                parseError: "Emailen er allerede i brug"
+            }
+        }
+        return {
+            error: "ukendt fejl",
+            parseError: e.message
+        }
+    }
+    return {
         success: "Din formular er blevet sendt"
     }
-
-    return res;
 }
