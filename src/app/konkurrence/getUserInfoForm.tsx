@@ -43,7 +43,7 @@ export default function UserInfoForm() {
                     <p className="bg-amber-100 p-4">
                         Ved at indsende dine informationer, accepterer du vores vilkår og betingelser.
                         <Link
-                            href="/terms-of-service"
+                            href="/tos"
                             className="inline-block mt-4 text-blue-500 hover:underline hover:underline-offset-8"
                         >
                             Læs vores Terms of Service
