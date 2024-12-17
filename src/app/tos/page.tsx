@@ -63,24 +63,24 @@ export default function Servicevilkaar() {
                 Vi forbeholder os retten til, efter eget skøn, at ændre eller erstatte disse Vilkår til enhver tid. Hvad der udgør en væsentlig ændring, vil blive bestemt efter vores eget skøn. Ved fortsat at tilgå eller bruge vores Tjeneste, efter at disse revisioner er trådt i kraft, accepterer du at være bundet af de reviderede vilkår.
               </p>
 
-              <h2 className="text-2xl font-bold mb-4">11. Kontakt os</h2>
-              <p className="text-md md:text-lg mb-4">
-                Hvis du har spørgsmål om disse Vilkår, bedes du kontakte os på [kontakt@email.com].
-              </p>
-
-              <h2 className="text-2xl font-bold mb-4">12. Indsamling og brug af data</h2>
+              <h2 className="text-2xl font-bold mb-4">11. Indsamling og brug af data</h2>
               <p className="text-md md:text-lg mb-4">
                 Du anerkender og giver samtykke til, at vi kan indsamle, opbevare og bruge dine personlige oplysninger, herunder men ikke begrænset til dit navn, e-mailadresse, browseraktivitet og brugsmønstre, til formål som markedsføring, analyse og forbedring af vores tjenester. Disse data kan blive delt med og solgt til tredjeparter, annoncører, partnere, tilknyttede selskaber og andre enheder, som vi finder passende, både indenfor og udenfor vores organisation.
               </p>
 
-              <h2 className="text-2xl font-bold mb-4">13. Uopfordrede kommunikationer</h2>
+              <h2 className="text-2xl font-bold mb-4">12. Uopfordrede kommunikationer</h2>
               <p className="text-md md:text-lg mb-4">
                 Ved at acceptere disse betingelser giver du os ubegrænset ret til at sende dig uopfordrede reklame-e-mails, nyhedsbreve, tilbud og andre markedsføringsmaterialer, uanset om du har tilmeldt dig eller udtrykt interesse. Du forstår og accepterer, at disse kommunikationer kan blive sendt til dig på ubestemt tid, og at vi ikke er forpligtet til at stoppe med at sende dem på noget tidspunkt, selvom du afmelder dig eller vælger at fravælge.
               </p>
 
-              <h2 className="text-2xl font-bold mb-4">14. Ingen forpligtelse til at beskytte data</h2>
+              <h2 className="text-2xl font-bold mb-4">13. Ingen forpligtelse til at beskytte data</h2>
               <p className="text-md md:text-lg mb-4">
                 Vi forbeholder os retten til at overføre eller dele dine personlige data med tredjeparter, herunder men ikke begrænset til forretningspartnere, annoncører og tilknyttede selskaber, efter eget skøn, uden yderligere varsel til dig. Vi giver ingen garantier for, hvordan tredjeparter vil bruge eller beskytte dine oplysninger, når de er delt.
+              </p>
+              
+              <h2 className="text-2xl font-bold mb-4">14. Kontakt os</h2>
+              <p className="text-md md:text-lg mb-4">
+                Hvis du har spørgsmål om disse Vilkår, bedes du kontakte os på contact@horizon.dk
               </p>
             </div>
           </div>
